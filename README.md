@@ -11,3 +11,11 @@
 
 ## 環境
 Ruby 2.3.0, Sinatra
+
+## ローカル実行方法
+下記の方法でLINEに接続せず、コンソールで実行できます。
+
+```
+bundle install
+ruby ./console.rb
+```

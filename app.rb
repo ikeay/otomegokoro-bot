@@ -25,11 +25,14 @@ post '/line/callback' do
     when Line::Bot::Event::Message
       case event.type
       when Line::Bot::Event::MessageType::Text
-        analyze = AnalyzeText.new(event.message['text'])
-        result = analyze.result
+        analyze = AnalyzeText.new(event.message['text']).result
+        result = ""
+        analyzed_text.each do |r|
+          result += r + "\n"
+        end
         message = {
           type: 'text',
-          text: result
+          text: result.chomp!
         }
         client.reply_message(event['replyToken'], message)
       end

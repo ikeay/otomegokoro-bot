@@ -25,7 +25,7 @@ post '/line/callback' do
     when Line::Bot::Event::Message
       case event.type
       when Line::Bot::Event::MessageType::Text
-        analyze = AnalyzeText.new(event.message['text']).result
+        analyzed_text = AnalyzeText.new(event.message['text']).result
         result = ""
         analyzed_text.each do |r|
           result += r + "\n"

@@ -1,0 +1,27 @@
+{
+  "name": "Otomegokoro Bot",
+  "description": "女の子の気持ちをド直球に代弁してくれるBot",
+  "repository": "https://github.com/ikeay/otomegokoro-bot",
+  "logo": "https://avatars3.githubusercontent.com/u/1245781",
+  "env": {
+    "LINE_CHANNEL_SECRET": {
+      "description": "引用されて困っているツイートのURL"
+    },
+    "LINE_CHANNEL_TOKEN": {
+      "description": "Consumer key of 困っている人"
+    },
+    "TZ": {
+      "value": "Asia/Tokyo"
+    },
+    "LANG": {
+      "value": "ja_JP.UTF-8"
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "image": "heroku/ruby"
+}

@@ -12,6 +12,9 @@
 ## 環境
 Ruby 2.3.0, Sinatra
 
+## Herokuへデプロイ
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ## ローカル実行方法
 下記の方法でLINEに接続せず、コンソールで実行できます。
 

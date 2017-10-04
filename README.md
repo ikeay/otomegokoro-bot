@@ -5,6 +5,7 @@
 
 ## 連載
 - #1 [Bot開発のエキスパートに聞いた！プログラミング初心者こそChatbotを開発すべき理由とは？_[PR]](https://codeiq.jp/magazine/2017/07/52989/)
+- #2 [脱シンプルBot！Chatbotプログラムを最大限活用するためには？_[PR]](https://codeiq.jp/magazine/2017/09/53494/)
 
 ## Bot概要
 女の子の気持ちをド直球に代弁してくれるBotです。

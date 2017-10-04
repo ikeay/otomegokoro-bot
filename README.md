@@ -13,6 +13,9 @@ Ruby 2.3.0, Sinatra
 
 ## Herokuへデプロイ
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+- デプロイ後、Webhook URLにHerokuのURL`https://xxxx.herokuapp.com/line/callback
+`を登録する。`xxxx`はHerokuから発行されたアプリケーションURLに変更。
+- その他設定に関するドキュメントは[LINE Messaging APIの公式ドキュメント](https://developers.line.me/ja/docs/messaging-api/getting-started/)
 
 ## ローカル実行方法
 下記の方法でLINEに接続せず、コンソールで実行できます。

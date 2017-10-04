@@ -5,10 +5,10 @@
   "logo": "https://avatars3.githubusercontent.com/u/1245781",
   "env": {
     "LINE_CHANNEL_SECRET": {
-      "description": "引用されて困っているツイートのURL"
+      "description": "LINE BOTのチャンネルシークレット"
     },
     "LINE_CHANNEL_TOKEN": {
-      "description": "Consumer key of 困っている人"
+      "description": "LINE BOTのチャンネルトークン"
     },
     "TZ": {
       "value": "Asia/Tokyo"

@@ -1,6 +1,7 @@
 乙女心解説BOT
 ====
 
+次の連載に向けて改良中です。  
 女の子の気持ちをド直球に代弁してくれるBot。  
 [CodeIQ MAGAZINE](https://codeiq.jp/magazine/2017/07/52989/)の連載のために制作しました。
 

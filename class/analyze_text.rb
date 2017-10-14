@@ -2,7 +2,6 @@ require 'nkf'
 require 'redis'
 require 'json'
 require './class/pattern.rb'
-require 'pry'
 
 class AnalyzeText
   # 会話パターン一覧

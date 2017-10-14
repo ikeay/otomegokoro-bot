@@ -4,10 +4,10 @@ require 'line/bot'
 require './setting'
 require './class/analyze_text'
 
-configure do
-  uri = URI.parse(REDIS_URL)
-  $redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
-end
+# configure do
+uri = URI.parse(REDIS_URL)
+$redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+# end
 
 def client
   @client ||= Line::Bot::Client.new { |config|

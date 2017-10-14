@@ -64,15 +64,15 @@ class AnalyzeText
   def arbitration(score)
     case score
     when 4
-      "ケンカはやめて…"
+      ["ケンカはやめて…"]
     when 6
-      "ケンカはやめて！！"
+      ["ケンカはやめて！！"]
     when 8
-      "ケンカはやめてーーーー！！！"
+      ["ケンカはやめてーーーー！！！"]
     when 10
-      "ケンカやめよ(´・ω・｀)？"
+      ["ケンカやめよ(´・ω・｀)？"]
     else
-      return "…(´・ω・｀)" if score >= 10 && score % 10 == 0
+      return ["…(´・ω・｀)"] if score >= 10 && score % 10 == 0
       nil
     end
   end

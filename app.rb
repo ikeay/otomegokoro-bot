@@ -42,7 +42,7 @@ post '/line/callback' do
         # }
         message = {
           type: 'text',
-          text: "テスト・テスト #{event.to_json}"
+          text: "テスト・テスト #{event['source']}"
         }
         client.reply_message(event['replyToken'], message)
       end

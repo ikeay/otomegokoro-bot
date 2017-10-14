@@ -5,8 +5,8 @@ require './setting'
 require './class/analyze_text'
 
 # configure do
-uri = URI.parse(REDIS_URL)
-$redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
+# uri = URI.parse(REDIS_URL)
+# $redis = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
 # end
 
 def client
@@ -30,15 +30,19 @@ post '/line/callback' do
     when Line::Bot::Event::Message
       case event.type
       when Line::Bot::Event::MessageType::Text
-        userId =  event.source['roomId'] || event.source['groupId'] || event.source['userId']
-        analyzed_text = AnalyzeText.new(event.message['text'], userId).result
-        result = ""
-        analyzed_text.each do |r|
-          result += r + "\n"
-        end
+        # userId =  event.source['roomId'] || event.source['groupId'] || event.source['userId']
+        # analyzed_text = AnalyzeText.new(event.message['text'], userId).result
+        # result = ""
+        # analyzed_text.each do |r|
+        #   result += r + "\n"
+        # end
+        # message = {
+        #   type: 'text',
+        #   text: result.chomp!
+        # }
         message = {
           type: 'text',
-          text: result.chomp!
+          text: 'テスト・テスト'
         }
         client.reply_message(event['replyToken'], message)
       end

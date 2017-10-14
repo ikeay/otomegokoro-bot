@@ -30,7 +30,7 @@ post '/line/callback' do
     when Line::Bot::Event::Message
       case event.type
       when Line::Bot::Event::MessageType::Text
-        userId =  event.source['roomId'] || event.source['groupId'] || event.source['userId']
+        # userId = event.source['roomId'] || event.source['groupId'] || event.source['userId']
         # analyzed_text = AnalyzeText.new(event.message['text'], userId).result
         # result = ""
         # analyzed_text.each do |r|
@@ -42,7 +42,7 @@ post '/line/callback' do
         # }
         message = {
           type: 'text',
-          text: "テスト・テスト #{userId}"
+          text: "テスト・テスト #{event.to_json}"
         }
         client.reply_message(event['replyToken'], message)
       end

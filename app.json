@@ -23,5 +23,10 @@
       "size": "free"
     }
   },
-  "image": "heroku/ruby"
+  "image": "heroku/ruby",
+  "addons": [
+    {
+      "plan": "heroku-redis:hobby-dev"
+    }
+  ],
 }

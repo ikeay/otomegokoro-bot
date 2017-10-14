@@ -1,9 +1,11 @@
 # 会話パターンを定義するクラス
 class Pattern
-  attr_reader :matcher, :response
+  attr_reader :matcher, :response, :atmosphere_bad_score
 
-  def initialize(matcher, response)
-    @matcher, @response = matcher, [response].flatten
+  def initialize(matcher, response, atmosphere_bad_score)
+    @matcher = matcher
+    @response = [response].flatten
+    @atmosphere_bad_score = atmosphere_bad_score
   end
 
   # パターンにマッチするか？
@@ -14,7 +16,7 @@ end
 
 # 返事に必ず「乙女心解説:」とつけるパターン
 class ExplainPattern < Pattern
-  def initialize(matcher, response)
-    super(matcher, ["乙女心解説:", response])
+  def initialize(matcher, response, atmosphere_bad_score)
+    super(matcher, ["乙女心解説:", response], atmosphere_bad_score)
   end
 end
